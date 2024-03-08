@@ -2,18 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "client-pod"
-  #namespace: default
   labels:
     component: web
 spec:
   containers:
   - name: client
-    image: "amooedwin/multi-client"
-    resources:
-      limits:
-        cpu: 200m
-        memory: 500Mi
-      requests:
-        cpu: 100m
-        memory: 200Mi
-    
+    image: amooedwin/multi-client
+    ports:
+    - containerPort: 3000
