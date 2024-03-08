@@ -3,12 +3,9 @@ kind: Service
 metadata: 
   name: client-node-port
 spec:
-  type: NodePort
   ports:
-  - name:  client-node-port
-    port:  3050
+  - port: 80
     protocol: TCP
-    targetPort: 3000
-    #NodePort: 31515
+    targetPort: 9090
   selector:
     component: "web"
