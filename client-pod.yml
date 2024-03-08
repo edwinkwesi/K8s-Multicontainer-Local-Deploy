@@ -4,7 +4,7 @@ metadata:
   name: "client-pod"
   #namespace: default
   labels:
-    component: "web"
+    component: web
 spec:
   containers:
   - name: client
